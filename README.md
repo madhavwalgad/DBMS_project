@@ -20,3 +20,14 @@ Pillow              7.1.2
 
 To run: (localhost:8000) --->
 Clone this repository, navigate to the repo and start the server : python3 manage.py runserver
+
+
+
+ADMINUSER:
+USERNAME=MadWal
+Password=qwerty123
+
+DummyNewUser(cannot access admin side only user
+side):
+Username=newuser
+Password=testing321
