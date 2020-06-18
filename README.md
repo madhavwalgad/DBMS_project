@@ -2,15 +2,21 @@
 Second year DBMS lab project (CS254)
 
 Description:
-Build Security Service Website using Django framework and sqllite.
+Build Security Service Website using Django framework and sqllite. 
 
-Installation:
-'''
-python>3.+ ,
-Django              3.0.6 , 
-django-crispy-forms 1.9.1 , 
-Pillow              7.1.2 ,
-'''
+Installation (required: use pip to install all the python dependencies)
+
+python>3.+ 
+
+
+Django              3.0.6 
+
+
+django-crispy-forms 1.9.1 
+
+
+Pillow              7.1.2 
+
 
 To run: (localhost:8000) --->
-python3 manage.py runserver
+Clone this repository, navigate to the repo and start the server : python3 manage.py runserver
