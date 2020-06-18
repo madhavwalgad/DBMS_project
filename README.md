@@ -31,3 +31,5 @@ DummyNewUser(cannot access admin side only user
 side):
 Username=newuser
 Password=testing321
+
+Adminpage url:localhost:8000/admin
