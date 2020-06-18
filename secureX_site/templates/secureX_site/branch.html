@@ -1,0 +1,39 @@
+{% extends "secureX_site/base.html" %}
+{% load static %}
+{% block content %}
+<section class="jumbotron text-center">
+    <div class="container">
+      <h2 style="color:#010f0f; font-family:'Courier New'" > BRANCH LOCATIONS </h2>
+    </div>
+</section>
+
+  
+    
+    <table class="table table-hover table-bordered text-center">
+      <tr class="text-center">
+        <th>Branch Name</th>
+        <th>Building</th>
+        <th>Street</th>
+        <th>City</th>
+        <th>State</th>
+        <th>E-mail</th>
+        <th>ContactNumber</th>
+      </tr>
+      {% for branch in branches %}
+        <tr>
+          <td>{{ branch.branchname }}</td>
+          <td>{{ branch.building }}</td>
+          <td>{{ branch.street }}</td>
+          <td>{{ branch.city }}</td>
+          <td>{{ branch.state }}</td>
+          <td>{{ branch.email }}</td>
+          <td>{{ branch.contactnumber }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+   
+  <!--<style>
+    .border-primary { border: 3px solid #333f4b; }
+  </style>-->
+
+{% endblock content %}

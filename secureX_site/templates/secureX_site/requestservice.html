@@ -1,0 +1,13 @@
+{% extends "secureX_site/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+  <h1>Request Services</h1>
+  <form method="post">
+    {% csrf_token %}
+    <table>
+      {{ form|crispy }}
+    </table>
+    <button type="submit" class="btn btn-success">REQUEST</button>
+  </form>
+{% endblock %}

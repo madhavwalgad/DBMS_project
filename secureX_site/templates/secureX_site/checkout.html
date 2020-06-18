@@ -1,0 +1,42 @@
+{% extends "secureX_site/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="jumbotron text-center">
+  <div class="container">
+    <h2 style="color:#010f0f; font-family:'Courier New'" > CHECKOUT</h2>
+  </div>
+</div>
+  <div class="col-md-8 col-xs-12">
+    <table class="table">
+      <tr>
+        <td><h4>Order Summary</h4></td>
+      </tr>
+      <tr>
+        <td>
+          {% for item in order.get_cart_items %}
+          <tr>
+            <td>{{ item }}</td>
+            <td>R {{ item.course.cost }}</td>
+          </tr>
+          {% endfor %}
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Order Total</strong> </td>
+        <td> <strong>Rs {{ order.get_cart_total }}</strong></td>
+      </tr>
+    </table>
+
+  <!-- </form> -->
+  <form method="post">
+    {% csrf_token %}
+    <table>
+      {{ form|crispy }}
+    </table>
+  <a href="{% url 'process-payment' order.id %}" class="btn btn-danger" type="submit">
+    Pay
+  </a>
+  </form>
+</div>
+{% endblock content %}

@@ -1,0 +1,18 @@
+{% extends "secureX_site/base.html" %}
+
+{% block content %}
+<section class="jumbotron text-center">
+  <div class="container">
+    <h2 style="color:#010f0f; font-family:'Courier New'" >CAREER</h2>
+    <!-- <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p> -->
+    <a href="{% url 'jobapplication' %}" class="btn btn-lg btn-primary my-2">Apply for job !</a>
+  </div>
+</section>
+
+  <h2 >Open jobs listed below. Please login/register to apply for jobs!</h2>
+  <ul>
+    {% for oj in openjob %}
+        <li><h3>{{oj.jobname}} ( {{oj.jobtype}} )</h3></li>
+    {% endfor %}
+ </ul>
+{% endblock %}

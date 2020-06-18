@@ -1,0 +1,31 @@
+{% extends "secureX_site/base.html" %}
+{% load static %}
+{% block content %}
+<section class="jumbotron text-center">
+    <div class="container">
+      <h2 style="color:#010f0f; font-family:'Courier New'" >SERVICES</h2>
+      <!-- <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p> -->
+      <a href="{% url 'servicerequest' %}" class="btn btn-lg btn-primary my-2">Free Quote !</a>
+    </div>
+  </section>
+
+
+
+<div class="row">
+{% for service in services %}
+    <div class="col-md-3 ">
+        <div class="thumbnail">
+            <img width="100%" height="100" src= "{{ service.image.url }}">
+            <div class="caption">
+                <h5  style="color:#747979; font-family:'Courier New'" class="card-title"><b>{{ service.title }}</b></h5>
+                <p >{{ service.information }}</p>
+                <!-- <p  class="card-text">{{ service.cost }}</p> -->
+                
+            </div>
+        </div>
+    </div>
+ {% endfor %}
+</div>
+<script>$(".thumbnail").height(Math.max.apply(null, $(".thumbnail").map(function() { return $(this).height(); })));
+</script>
+{% endblock content %}
