@@ -4,7 +4,7 @@ Second year DBMS lab project (CS254)
 Description:
 Build Security Service Website using Django framework and sqllite. 
 
-Installation (required: use pip to install all the python dependencies)
+Installation (required: use pip to install all the python dependencies mentioned below) :
 
 python>3.+ 
 
